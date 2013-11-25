@@ -160,8 +160,13 @@
     <Content Include="Background.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Images\BackGround.png" />
+    <Resource Include="Images\Blue.jpg" />
     <Content Include="Images\cameradark.png" />
     <Content Include="Images\cameralight.png" />
+    <Resource Include="Images\Green.jpg" />
+    <Resource Include="Images\Icon.png" />
+    <Resource Include="Images\Red.jpg" />
     <Content Include="SplashScreenImage.jpg" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />

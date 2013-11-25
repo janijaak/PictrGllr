@@ -87,6 +87,26 @@ namespace PictrGllr
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
+
+            // some random number
+            Random random = new Random();
+            // get application tile
+            ShellTile tile = ShellTile.ActiveTiles.First();
+            if (null != tile)
+            {
+                // creata a new data for tile
+                StandardTileData data = new StandardTileData();
+                // tile foreground data
+                data.Title = "PictrGllr";
+                data.BackgroundImage = new Uri("/Images/Red.jpg", UriKind.Relative);
+                data.Count = random.Next(99);
+                // to make tile flip add data to background also
+                data.BackTitle = "PictrGllr";
+                data.BackBackgroundImage = new Uri("/Images/Red.jpg", UriKind.Relative);
+                data.BackContent = "Your Flickr Gallery";
+                // update tile
+                tile.Update(data);
+            }
             // Initialize viewmodel
             uvm = new UserViewModel();
             pvm = new PictureViewModel();

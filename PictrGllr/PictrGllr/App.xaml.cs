@@ -73,6 +73,7 @@ namespace PictrGllr
 
         }
 
+        // Logout
         public void LogOut()
         {
             FlickrManager.OAuthToken = string.Empty;
@@ -88,23 +89,21 @@ namespace PictrGllr
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
 
-            // some random number
-            Random random = new Random();
+         
             // get application tile
             ShellTile tile = ShellTile.ActiveTiles.First();
             if (null != tile)
             {
-                // creata a new data for tile
                 StandardTileData data = new StandardTileData();
-                // tile foreground data
+                // Data to foreground
                 data.Title = "PictrGllr";
                 data.BackgroundImage = new Uri("/Images/Red.jpg", UriKind.Relative);
-                data.Count = random.Next(99);
-                // to make tile flip add data to background also
+                
+                // Data to background
                 data.BackTitle = "PictrGllr";
                 data.BackBackgroundImage = new Uri("/Images/Red.jpg", UriKind.Relative);
-                data.BackContent = "Your Flickr Gallery";
-                // update tile
+                data.BackContent = "My Pictr Gallery";
+                
                 tile.Update(data);
             }
             // Initialize viewmodel
@@ -120,7 +119,7 @@ namespace PictrGllr
         // This code will not execute when the application is first launched
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
-            // Tombstoning, return the state of the viewmodel when returning ot app
+            // Tombstoning, return the state of the viewmodel when returning to app
             if (PhoneApplicationService.Current.State.ContainsKey(UserModelKey))
             {
                 uvm = PhoneApplicationService.Current.State[UserModelKey] as UserViewModel;

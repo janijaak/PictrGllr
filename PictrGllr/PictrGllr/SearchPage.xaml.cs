@@ -19,6 +19,8 @@ using PictrGllr.Model;
 
 namespace PictrGllr
 {
+
+    // Code to search all flickr picture with tags
     public partial class SearchPage : PhoneApplicationPage
     {
         public SearchPage()
@@ -42,7 +44,7 @@ namespace PictrGllr
             return (UrlRequest);
         }
 
-        // Make request to fetch weather data
+        // Make request to fetch data
         public void MakeRequest(string url)
         {
             WebClient client = new WebClient();
@@ -101,11 +103,7 @@ namespace PictrGllr
             }
         }
 
-        private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+        
 
 
     }

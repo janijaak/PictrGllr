@@ -30,6 +30,8 @@ namespace PictrGllr
             
         }
 
+
+        // Open splash screen control
         private void OpenSplashScreen()
         {
             this.popup = new Popup();
@@ -38,6 +40,7 @@ namespace PictrGllr
             LoadData();
         }
 
+        // Splash screen async
         private void LoadData()
         {
             backroungWorker = new BackgroundWorker();
@@ -47,6 +50,7 @@ namespace PictrGllr
                 new RunWorkerCompletedEventHandler(backroungWorker_RunWorkerCompleted);
             backroungWorker.RunWorkerAsync();
         }
+        // Splash screen async completed. Hide splash screen when done.
         void backroungWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             this.Dispatcher.BeginInvoke(() =>
@@ -56,12 +60,15 @@ namespace PictrGllr
             }
         );
         }
+
+        // Splash screen
         void backroungWorker_DoWork(object sender, DoWorkEventArgs e)
         {
             Thread.Sleep(2000);
             
         }
 
+        // Method to hide buttons if not authenticated and vice versa
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
@@ -94,6 +101,7 @@ namespace PictrGllr
             NavigationService.Navigate(new Uri("/AuthenticationPage.xaml", UriKind.Relative));
         }
 
+        // Logout
         private void LogoutMenuItem_Click(object sender, EventArgs e)
         {
             App.Current.LogOut();

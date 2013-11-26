@@ -14,12 +14,13 @@ using FlickrNet;
 
 namespace PictrGllr
 {
+
+    // Code for authentication. Web browser is used to authentication with OAuth.
     public partial class AuthenticationPage : PhoneApplicationPage
     {
-        // A dummy callback url - as long as this is a valid URL it doesn't matter what it is
+        // Callback url
         private const string callbackUrl = "http://localhost/";
 
-        // The request token, held while the authentication is completed.
         private OAuthRequestToken requestToken = null;
 
         public AuthenticationPage()
@@ -59,11 +60,9 @@ namespace PictrGllr
         private void WebBrowser1_Navigating(object sender, NavigatingEventArgs e)
         {
             
-            // if we are not navigating to the callback url then authentication is not complete.
             if (!e.Uri.AbsoluteUri.StartsWith(callbackUrl)) return;
 
-            // Get "oauth_verifier" part of the query string.
-            var oauthVerifier = e.Uri.Query.Split('&')
+           var oauthVerifier = e.Uri.Query.Split('&')
                 .Where(s => s.Split('=')[0] == "oauth_verifier")
                 .Select(s => s.Split('=')[1])
                 .FirstOrDefault();
@@ -74,15 +73,14 @@ namespace PictrGllr
                 return;
             }
 
-            // Found verifier, so cancel navigation
+            
             e.Cancel = true;
 
-            // Obtain the access token from Flickr
+         
             Flickr f = FlickrManager.GetInstance();
 
             f.OAuthGetAccessTokenAsync(requestToken, oauthVerifier, r =>
             {
-                // Check if an error was returned
                 if (r.Error != null)
                 {
                     Dispatcher.BeginInvoke(() =>
@@ -97,7 +95,7 @@ namespace PictrGllr
                 // Save the oauth token for later use
                 FlickrManager.OAuthToken = accessToken.Token;
                 FlickrManager.OAuthTokenSecret = accessToken.TokenSecret;
-                
+                // Save user for later use
                 App.Current.uvm.AddUser(accessToken.UserId, accessToken.Username);
                                
                 Dispatcher.BeginInvoke(() =>

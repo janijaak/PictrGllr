@@ -11,7 +11,7 @@ using System.Windows.Shapes;
 
 namespace PictrGllr.Model
 {
-    
+    // Data contract for picture search
     [System.Runtime.Serialization.DataContractAttribute()]
     public partial class PictureDataContract
     {

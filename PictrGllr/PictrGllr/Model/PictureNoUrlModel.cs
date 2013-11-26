@@ -11,6 +11,7 @@ using System.Windows.Shapes;
 
 namespace PictrGllr.Model
 {
+    // Model for pictures when url needs to be created
     public class PictureNoUrlModel
     {
         public int OrderNumber { get; set; }

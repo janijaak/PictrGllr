@@ -12,6 +12,8 @@ using System.Windows.Shapes;
 
 namespace PictrGllr.View
 {
+
+    // Splash screen control
     public partial class SplashScreenControl : UserControl
     {
         public SplashScreenControl()

@@ -13,6 +13,8 @@ using FlickrNet;
 
 namespace PictrGllr
 {
+
+    // Used to authenticate with flickr
     public class FlickrManager
     {
         public const string ApiKey = "366dc42d088453ab5355b6abc4098b68";

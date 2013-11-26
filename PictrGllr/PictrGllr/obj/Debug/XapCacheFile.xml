@@ -1,12 +1,12 @@
-﻿<xapCache source="C:\Projects\PictrGllr\PictrGllr\PictrGllr\Bin\Debug\PictrGllr.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="25.11.2013 9:19:24">
+﻿<xapCache source="C:\Projects\PictrGllr\PictrGllr\PictrGllr\Bin\Debug\PictrGllr.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="26.11.2013 20:51:37">
   <file source="C:\Projects\PictrGllr\PictrGllr\PictrGllr\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="25.11.2013 9:09:20" />
   <file source="C:\Projects\PictrGllr\PictrGllr\PictrGllr\Images\BackGround.png" archivePath="Images\BackGround.png" lastWriteTime="25.11.2013 9:08:55" />
   <file source="C:\Projects\PictrGllr\PictrGllr\PictrGllr\Images\Icon.png" archivePath="Images\Icon.png" lastWriteTime="25.11.2013 9:08:55" />
-  <file source="C:\Projects\PictrGllr\PictrGllr\PictrGllr\obj\Debug\PictrGllr.dll" archivePath="PictrGllr.dll" lastWriteTime="25.11.2013 9:19:23" />
+  <file source="C:\Projects\PictrGllr\PictrGllr\PictrGllr\obj\Debug\PictrGllr.dll" archivePath="PictrGllr.dll" lastWriteTime="26.11.2013 20:51:31" />
   <file source="C:\Projects\PictrGllr\PictrGllr\packages\FlickrNet.WP7.3.8.0\lib\sl3-wp\FlickrNetWP7.dll" archivePath="FlickrNetWP7.dll" lastWriteTime="9.11.2013 9:39:37" />
   <file source="C:\Projects\PictrGllr\PictrGllr\packages\WPtoolkit.4.2013.08.16\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="9.11.2013 9:40:50" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="15.9.2011 15:36:26" />
-  <file source="C:\Projects\PictrGllr\PictrGllr\PictrGllr\obj\Debug\fi\PictrGllr.resources.dll" archivePath="fi\PictrGllr.resources.dll" lastWriteTime="25.11.2013 9:19:24" />
+  <file source="C:\Projects\PictrGllr\PictrGllr\PictrGllr\obj\Debug\fi\PictrGllr.resources.dll" archivePath="fi\PictrGllr.resources.dll" lastWriteTime="26.11.2013 20:51:33" />
   <file source="C:\Projects\PictrGllr\PictrGllr\PictrGllr\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="9.11.2013 9:37:39" />
   <file source="C:\Projects\PictrGllr\PictrGllr\PictrGllr\Background.png" archivePath="Background.png" lastWriteTime="9.11.2013 9:37:39" />
   <file source="C:\Projects\PictrGllr\PictrGllr\PictrGllr\Images\cameradark.png" archivePath="Images\cameradark.png" lastWriteTime="9.11.2013 15:29:46" />

@@ -14,6 +14,8 @@ using FlickrNet;
 
 namespace PictrGllr
 {
+
+    // Code to view your own picture gallery
     public partial class GalleryPage : PhoneApplicationPage
     {
         public GalleryPage()

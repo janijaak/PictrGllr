@@ -12,7 +12,7 @@
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
     shell:SystemTray.IsVisible="True"
-    xmlns:Views="clr-namespace:PictrGllr.View" Loaded="PhoneApplicationPage_Loaded">
+    xmlns:Views="clr-namespace:PictrGllr.View">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">

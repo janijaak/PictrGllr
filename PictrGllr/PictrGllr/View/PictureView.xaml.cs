@@ -14,6 +14,8 @@ using Microsoft.Phone.Controls;
 
 namespace PictrGllr.View
 {
+
+    // View to show list of pictures in gallery and search pages
     public partial class PictureView : UserControl
     {
         public PictureView()

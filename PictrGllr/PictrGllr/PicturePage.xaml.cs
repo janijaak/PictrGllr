@@ -18,6 +18,8 @@ using System.IO.IsolatedStorage;
 
 namespace PictrGllr
 {
+
+    // Page to view single picture
     public partial class PicturePage : PhoneApplicationPage
     {
         public PicturePage()
@@ -46,7 +48,7 @@ namespace PictrGllr
                 bigPicture.Source = imgSourceR;
             }
         }
-
+        // Below code for pinch zoom
         // these two fully define the zoom state:
         private double TotalImageScale = 1d;
         private Point ImagePosition = new Point(0, 0);
@@ -118,6 +120,8 @@ namespace PictrGllr
                 newPos.Y - currentPosition.Y);
         }
 
+
+        // When holding picture, offer possibility to save the picture to phone
         private void bigPicture_Hold(object sender, System.Windows.Input.GestureEventArgs e)
         {
             MessageBoxResult mb = MessageBox.Show(AppResources.DownloadQuestion, AppResources.DownloadTitle, MessageBoxButton.OKCancel);
@@ -142,11 +146,16 @@ namespace PictrGllr
 
         }
 
-
-        // TODO
+        private static string CreateFileName()
+        {
+            Guid g = Guid.NewGuid();
+            var filename = g.ToString().Replace("-", "");
+            return filename + ".jpg";
+        }
+        // Save picture to phone
         private void SaveImage(string source)
         {
-            var fileName = "test.jpg";
+            var fileName = CreateFileName();
             Uri url;
             if (Uri.TryCreate(source, UriKind.Absolute, out url))
             {

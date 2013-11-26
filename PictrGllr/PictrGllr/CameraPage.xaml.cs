@@ -13,6 +13,7 @@ using System.Threading;
 
 namespace PictrGllr
 {
+    // Code for taking pictures
     public partial class CameraPage : PhoneApplicationPage
     {
 
@@ -203,6 +204,8 @@ namespace PictrGllr
 
                 });
 
+
+                // Preview taken image
                 Deployment.Current.Dispatcher.BeginInvoke(delegate()
                 {
                     previewImage.Visibility = System.Windows.Visibility.Visible;
@@ -226,6 +229,8 @@ namespace PictrGllr
 
         }
 
+
+        // Get preview image
         private static BitmapImage GetImageFromIsolatedStorage(string imageName)
         {
 
@@ -243,13 +248,14 @@ namespace PictrGllr
             return bimg;
         }
 
+
         private static string CreateFileName()
         {
             Guid g = Guid.NewGuid();
             var filename = g.ToString().Replace("-", "");
             return filename + ".jpg";
         }
-
+        // Take a new picture
         private void NewPictureButton_Click(object sender, RoutedEventArgs e)
         {
             NewPictureButton.Visibility = System.Windows.Visibility.Collapsed;
@@ -258,6 +264,8 @@ namespace PictrGllr
             previewImage.Visibility = System.Windows.Visibility.Collapsed;
         }
 
+
+        // Upload to your flickr gallery
         private void UploadButton_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult mb = MessageBox.Show(AppResources.UploadQuestion, AppResources.UploadTitle, MessageBoxButton.OKCancel);

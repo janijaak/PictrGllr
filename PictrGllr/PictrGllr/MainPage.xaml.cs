@@ -26,7 +26,10 @@ namespace PictrGllr
         public MainPage()
         {
             InitializeComponent();
-            OpenSplashScreen();
+            if (App.Current.uvm.Items.Count == 0)
+            {
+                OpenSplashScreen();
+            }
             
         }
 
